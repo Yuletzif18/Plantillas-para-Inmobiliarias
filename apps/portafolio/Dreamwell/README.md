@@ -1,16 +1,26 @@
-# Dreamwell - Plantilla Inmobiliaria Nuxt.js
+# 🏡 Dreamwell - Plantilla Inmobiliaria Premium
 
-Plantilla moderna para sitios web inmobiliarios construida con Nuxt.js 3, basada en el diseño Dreamwell.
+> Plantilla elegante y moderna para sitios web inmobiliarios de lujo, construida con Nuxt.js 3 y Vue 3.
 
-## 🚀 Características
+[![Nuxt 3](https://img.shields.io/badge/Nuxt-3.x-00DC82?style=flat&logo=nuxt.js)](https://nuxt.com/)
+[![Vue 3](https://img.shields.io/badge/Vue-3.x-4FC08D?style=flat&logo=vue.js)](https://vuejs.org/)
 
-- ✅ Nuxt.js 3 con Vue 3
-- ✅ Diseño responsive y moderno
-- ✅ Páginas para inmuebles, proyectos y servicios
-- ✅ Sistema de rutas dinámicas
-- ✅ Formularios de contacto integrados
-- ✅ SEO optimizado
-- ✅ Fácil personalización
+## 📋 Descripción
+
+**Dreamwell** es una plantilla profesional diseñada específicamente para inmobiliarias de alto nivel que buscan destacar sus propiedades premium con un diseño sofisticado y elegante. Perfecto para agencias inmobiliarias, desarrolladores de proyectos residenciales y corredores de propiedades de lujo.
+
+## ✨ Características Principales
+
+- ✅ **Nuxt.js 3** con Vue 3 Composition API
+- ✅ **Diseño Responsive** optimizado para todos los dispositivos
+- ✅ **Páginas Dinámicas** para inmuebles, proyectos y servicios
+- ✅ **Sistema de Rutas** dinámico y SEO-friendly
+- ✅ **Formularios de Contacto** integrados y funcionales
+- ✅ **SEO Optimizado** con meta tags y structured data
+- ✅ **Animaciones Suaves** con Animate.css y WOW.js
+- ✅ **Carruseles Modernos** con Slick Slider
+- ✅ **Galerías de Imágenes** con LightGallery
+- ✅ **Fácil Personalización** de colores y estilos
 
 ## 📋 Requisitos Previos
 
@@ -144,6 +154,68 @@ Las páginas están preparadas para conectarse con una API backend. Los puntos d
 - **/site/legal** - Declaración legal
 - **/site/privacidad** - Política de privacidad
 - **/site/condiciones** - Términos y condiciones
+- **/site/ver/[id]/[canonico]** - Páginas personalizadas
+
+## 🚀 Tecnologías Utilizadas
+
+- **Nuxt.js 3** - Framework Vue.js para producción
+- **Vue.js 3** - Framework JavaScript progresivo
+- **Bootstrap 5** - Framework CSS
+- **jQuery** - Librería JavaScript
+- **Slick Slider** - Carruseles
+- **LightGallery** - Galerías de imágenes
+- **Animate.css** - Animaciones CSS
+- **WOW.js** - Animaciones al scroll
+- **Odometer** - Contador animado
+- **FontAwesome** - Iconos
+
+## 📦 Deployment
+
+### Vercel (Recomendado)
+
+```bash
+# Instalar Vercel CLI
+npm i -g vercel
+
+# Deploy
+vercel
+```
+
+### Netlify
+
+```bash
+# Build command
+npm run build
+
+# Publish directory
+.output/public
+```
+
+### Otros Hosts
+
+Esta plantilla puede desplegarse en cualquier servicio que soporte Node.js:
+- AWS Amplify
+- Firebase Hosting
+- Cloudflare Pages
+- Railway
+
+## 🛠️ Soporte y Mantenimiento
+
+Para reportar bugs o solicitar nuevas características, por favor abre un issue en el repositorio principal.
+
+## 📄 Licencia
+
+Este proyecto está bajo la Licencia MIT.
+
+## 👨‍💻 Autor
+
+**Yuletzif**
+- GitHub: [@Yuletzif18](https://github.com/Yuletzif18)
+
+---
+
+⭐ Si te gusta esta plantilla, ¡considera darle una estrella en GitHub!
+
 
 ## 🤝 Soporte
 
