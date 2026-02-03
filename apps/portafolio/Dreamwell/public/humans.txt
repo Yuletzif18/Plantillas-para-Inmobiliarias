@@ -1,0 +1,13 @@
+/* humanstxt.org */
+
+/* TEAM */
+Developer: Tu Equipo
+Site: https://www.tuempresa.com
+Contact: contacto@tuempresa.com
+Location: [Tu Ciudad, País]
+
+/* SITE */
+Last update: 2026/02/03
+Standards: HTML5, CSS3, JavaScript
+Components: Nuxt.js, Vue.js
+Software: VS Code, Git

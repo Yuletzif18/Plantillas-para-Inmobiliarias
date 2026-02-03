@@ -1,0 +1,6 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="800" height="600" viewBox="0 0 800 600">
+  <rect width="800" height="600" fill="#e9eef3"/>
+  <rect x="120" y="220" width="560" height="280" fill="#cfd8e3"/>
+  <polygon points="120,220 400,80 680,220" fill="#9fb3c8"/>
+  <text x="50%" y="560" dominant-baseline="middle" text-anchor="middle" font-family="Segoe UI, Arial" font-size="28" fill="#274663">Propiedad destacada</text>
+</svg>

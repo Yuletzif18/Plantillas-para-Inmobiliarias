@@ -1,0 +1,9 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="900" height="500" viewBox="0 0 900 500">
+  <rect width="900" height="500" fill="#f3f6fa"/>
+  <circle cx="120" cy="120" r="80" fill="#c7d3e1"/>
+  <rect x="240" y="70" width="600" height="40" rx="6" fill="#9fb3c8"/>
+  <rect x="240" y="130" width="520" height="22" rx="4" fill="#cfd8e3"/>
+  <rect x="240" y="170" width="560" height="22" rx="4" fill="#cfd8e3"/>
+  <rect x="240" y="210" width="540" height="22" rx="4" fill="#cfd8e3"/>
+  <text x="50%" y="420" dominant-baseline="middle" text-anchor="middle" font-family="Segoe UI, Arial" font-size="26" fill="#274663">Noticias y consejos inmobiliarios</text>
+</svg>
