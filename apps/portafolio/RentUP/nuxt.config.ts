@@ -40,5 +40,13 @@ export default defineNuxtConfig({
       siteName: 'RentUP',
       siteDescription: 'Portal inmobiliario líder'
     }
+  },
+
+  vite: {
+    build: {
+      rollupOptions: {
+        external: (id) => id?.startsWith?.('/img/') || id?.startsWith?.('/css/') || id?.startsWith?.('/js/')
+      }
+    }
   }
 })

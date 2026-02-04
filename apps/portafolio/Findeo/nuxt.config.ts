@@ -4,5 +4,13 @@ export default defineNuxtConfig({
   devtools: { enabled: true },
   ssr: false,
   srcDir: 'app',
-  pages: true
+  pages: true,
+
+  vite: {
+    build: {
+      rollupOptions: {
+        external: (id) => id?.startsWith?.('/img/') || id?.startsWith?.('/css/') || id?.startsWith?.('/js/')
+      }
+    }
+  }
 })
