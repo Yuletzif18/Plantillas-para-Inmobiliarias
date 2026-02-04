@@ -73,17 +73,12 @@ export default defineNuxtConfig({
 
   modules: ['@nuxt/image'],
 
-  vite: {
-    assetsInclude: ['**/*.svg', '**/*.png', '**/*.jpg', '**/*.jpeg'],
-    build: {
-      rollupOptions: {
-        external: (id) => {
-          if (typeof id === 'string' && id.startsWith('/images/')) {
-            return true
-          }
-          return false
-        }
+  nitro: {
+    publicAssets: [
+      {
+        dir: '../public',
+        maxAge: 60 * 60 * 24 * 365
       }
-    }
+    ]
   }
 })
