@@ -71,5 +71,15 @@ export default defineNuxtConfig({
     '/site': { redirect: { to: '/', statusCode: 301 } }
   },
 
-  modules: ['@nuxt/image']
+  modules: ['@nuxt/image'],
+
+  vite: {
+    build: {
+      rollupOptions: {
+        external: [
+          /^\/images\//
+        ]
+      }
+    }
+  }
 })
