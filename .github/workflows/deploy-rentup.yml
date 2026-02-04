@@ -37,11 +37,11 @@ jobs:
 
       - name: Install dependencies with pnpm
         working-directory: apps/portafolio/RentUP
-        run: pnpm install --ignore-scripts
+        run: pnpm install --frozen-lockfile
 
-      - name: Run Nuxt prepare
+      - name: Rebuild native modules
         working-directory: apps/portafolio/RentUP
-        run: pnpm run prepare || npx nuxt prepare
+        run: pnpm rebuild
 
       - name: Build project
         working-directory: apps/portafolio/RentUP
