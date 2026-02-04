@@ -11,6 +11,7 @@ export default defineNuxtConfig({
   },
   
   app: {
+    baseURL: '/',
     head: {
       htmlAttrs: { lang: 'es' },
       title: 'RentUP - Portal Inmobiliario',
@@ -51,11 +52,6 @@ export default defineNuxtConfig({
   },
 
   nitro: {
-    preset: 'vercel',
-    serveStatic: true
-  },
-
-  app: {
-    baseURL: '/'
+    preset: 'static'
   }
 })
