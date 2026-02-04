@@ -37,7 +37,11 @@ jobs:
 
       - name: Install dependencies with pnpm
         working-directory: apps/portafolio/RentUP
-        run: pnpm install
+        run: pnpm install --ignore-scripts
+
+      - name: Run Nuxt prepare
+        working-directory: apps/portafolio/RentUP
+        run: pnpm run prepare || npx nuxt prepare
 
       - name: Build project
         working-directory: apps/portafolio/RentUP
