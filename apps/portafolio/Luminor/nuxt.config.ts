@@ -71,14 +71,5 @@ export default defineNuxtConfig({
     '/site': { redirect: { to: '/', statusCode: 301 } }
   },
 
-  modules: ['@nuxt/image'],
-
-  nitro: {
-    publicAssets: [
-      {
-        dir: '../public',
-        maxAge: 60 * 60 * 24 * 365
-      }
-    ]
-  }
+  modules: ['@nuxt/image']
 })

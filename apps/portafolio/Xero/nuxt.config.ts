@@ -40,14 +40,5 @@ export default defineNuxtConfig({
       siteName: 'RentUP',
       siteDescription: 'Portal inmobiliario líder'
     }
-  },
-
-  nitro: {
-    publicAssets: [
-      {
-        dir: '../public',
-        maxAge: 60 * 60 * 24 * 365
-      }
-    ]
   }
 })
