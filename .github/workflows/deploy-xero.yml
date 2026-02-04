@@ -24,12 +24,15 @@ jobs:
         uses: actions/setup-node@v3
         with:
           node-version: '18'
-          cache: 'npm'
-          cache-dependency-path: 'apps/portafolio/Xero/package-lock.json'
+
+      - name: Clean up node_modules and lockfile
+        working-directory: apps/portafolio/Xero
+        run: |
+          rm -rf node_modules package-lock.json
 
       - name: Install dependencies
         working-directory: apps/portafolio/Xero
-        run: npm ci
+        run: npm install
 
       - name: Build project
         working-directory: apps/portafolio/Xero
