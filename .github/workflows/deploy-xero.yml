@@ -8,15 +8,6 @@ on:
       - '.github/workflows/deploy-xero.yml'
   workflow_dispatch:
 
-permissions:
-  contents: read
-  pages: write
-  id-token: write
-
-concurrency:
-  group: "pages-xero"
-  cancel-in-progress: true
-
 jobs:
   build-and-deploy:
     runs-on: ubuntu-latest
@@ -39,11 +30,10 @@ jobs:
         working-directory: apps/portafolio/Xero
         run: npm run build
 
-      - name: Upload artifact
-        uses: actions/upload-pages-artifact@v2
-        with:
-          path: 'apps/portafolio/Xero/.output/public'
-
       - name: Deploy to GitHub Pages
-        id: deployment
-        uses: actions/deploy-pages@v2
+        uses: peaceiris/actions-gh-pages@v3
+        with:
+          github_token: ${{ secrets.GITHUB_TOKEN }}
+          publish_dir: ./apps/portafolio/Xero/.output/public
+          cname: xero.github.yuletzif18.com
+
