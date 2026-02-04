@@ -7,6 +7,15 @@
 
 Portal inmobiliario moderno y profesional desarrollado con **Nuxt 3**, **Vue 3** y **TypeScript**. Diseñado para facilitar la búsqueda, compra, venta y alquiler de propiedades con una experiencia de usuario excepcional.
 
+## 🎬 Demo en Vivo
+
+<video width="100%" controls style="border-radius: 8px; margin: 20px 0;">
+  <source src="./public/demoVideo/10-05-50.mp4" type="video/mp4">
+  Tu navegador no soporta videos HTML5
+</video>
+
+**[Ver sitio en vivo →](https://plantillas-para-inmobiliarias-rentu.vercel.app/)**
+
 ## ✨ Características Principales
 
 - 🏠 **Gestión de Propiedades**: Sistema completo de listado y detalle de inmuebles

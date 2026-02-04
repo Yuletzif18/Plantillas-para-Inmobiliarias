@@ -179,3 +179,4 @@ docker-compose.prod.yml
 # Local environment files
 .env.local
 .env.*.local
+.env*.local

@@ -13,35 +13,41 @@ Este repositorio contiene una colección de **5 plantillas profesionales** dise�
 
 ## 🎨 Plantillas Disponibles
 
-### 1. **Dreamwell** - Elegancia Moderna
+### ✅ Desplegadas en Vercel
+
+#### 1. **Dreamwell** - Elegancia Moderna
 Plantilla con diseño minimalista y elegante, ideal para inmobiliarias de lujo y propiedades premium.
 - 🎯 Diseño limpio y sofisticado
 - 📱 Totalmente responsive
 - 🔍 Búsqueda avanzada de propiedades
 - 📧 Formularios de contacto integrados
+- 🌐 [Demo en Vivo](https://plantillas-para-inmobiliarias-dreamwell.vercel.app/)
 
-### 2. **Findeo** - Portal Completo
+#### 2. **Luminor** - Arquitectura Premium
+Diseño arquitectónico profesional enfocado en proyectos de alta gama.
+- 🏗️ Showcases de proyectos
+- 🖼️ Galerías de imágenes avanzadas
+- 📐 Planos interactivos
+- 🎨 Animaciones suaves con GSAP
+- 🌐 [Demo en Vivo](https://plantillas-para-inmobiliarias-lumin.vercel.app/)
+
+### 🔄 En Desarrollo (No Desplegadas)
+
+#### 3. **Findeo** - Portal Completo
 Portal inmobiliario completo con múltiples layouts y funcionalidades avanzadas.
 - 🏢 Listados de agencias y agentes
 - 🗺️ Integración con mapas interactivos
 - 📊 Comparador de propiedades
 - 💼 Panel de usuario
 
-### 3. **Luminor** - Arquitectura Premium
-Diseño arquitectónico profesional enfocado en proyectos de alta gama.
-- 🏗️ Showcases de proyectos
-- 🖼️ Galerías de imágenes avanzadas
-- 📐 Planos interactivos
-- 🎨 Animaciones suaves con GSAP
-
-### 4. **RentUP** - Solución de Alquiler
+#### 4. **RentUP** - Solución de Alquiler
 Especializada en propiedades de alquiler y gestión de arrendamientos.
 - 🏠 Sistema de reservas
 - 📅 Calendario de disponibilidad
 - 💰 Calculadora de rentas
 - ✅ Gestión de solicitudes
 
-### 5. **Xero** - Minimalista y Rápido
+#### 5. **Xero** - Minimalista y Rápido
 Plantilla ultra-ligera y rápida, perfecta para startups inmobiliarias.
 - ⚡ Carga ultrarrápida
 - 🎯 Diseño minimalista
@@ -183,13 +189,16 @@ Cada plantilla incluye:
 
 ## 📸 Demos en Vivo
 
-- **Dreamwell**: [https://dreamwell-inmobiliaria.vercel.app](https://dreamwell-inmobiliaria.vercel.app)
-- **Findeo**: [https://findeo-portal.vercel.app](https://findeo-portal.vercel.app)
-- **Luminor**: [https://luminor-arquitectura.vercel.app](https://luminor-arquitectura.vercel.app)
-- **Xero**: [https://xero-minimalista.vercel.app](https://xero-minimalista.vercel.app)
-- **RentUP**: [https://rentup-alquiler.vercel.app](https://rentup-alquiler.vercel.app)
+### ✅ Desplegadas
+- **Dreamwell**: [https://plantillas-para-inmobiliarias-dreamwell.vercel.app/](https://plantillas-para-inmobiliarias-dreamwell.vercel.app/)
+- **Luminor**: [https://plantillas-para-inmobiliarias-lumin.vercel.app/](https://plantillas-para-inmobiliarias-lumin.vercel.app/)
 
-> 💡 Cada demo es completamente funcional y está optimizado para producción
+### 🔄 Próximamente (En Desarrollo)
+- **Findeo**: Portal completo de búsqueda inmobiliaria
+- **RentUP**: Solución especializada en alquiler
+- **Xero**: Plantilla minimalista y ultrarrápida
+
+> 💡 Las demos desplegadas están completamente funcionales y optimizadas para producción
 
 ## 🤝 Contribuciones
 
