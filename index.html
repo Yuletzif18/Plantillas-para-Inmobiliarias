@@ -1,0 +1,411 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Colección profesional de plantillas web modernas para negocios inmobiliarios, desarrolladas con Nuxt.js 3 y Vue 3.">
+    <title>Plantillas para Inmobiliarias | Colección Profesional</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, sans-serif;
+            line-height: 1.6;
+            color: #333;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            min-height: 100vh;
+        }
+
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 20px;
+        }
+
+        header {
+            text-align: center;
+            padding: 60px 20px 40px;
+            color: white;
+        }
+
+        header h1 {
+            font-size: 3em;
+            margin-bottom: 15px;
+            text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);
+        }
+
+        header p {
+            font-size: 1.3em;
+            opacity: 0.95;
+            max-width: 800px;
+            margin: 0 auto;
+        }
+
+        .badges {
+            display: flex;
+            justify-content: center;
+            gap: 10px;
+            flex-wrap: wrap;
+            margin: 20px 0;
+        }
+
+        .badge {
+            background: rgba(255, 255, 255, 0.2);
+            padding: 8px 16px;
+            border-radius: 20px;
+            font-size: 0.9em;
+            color: white;
+            backdrop-filter: blur(10px);
+        }
+
+        .templates-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+            gap: 30px;
+            padding: 40px 0;
+        }
+
+        .template-card {
+            background: white;
+            border-radius: 15px;
+            overflow: hidden;
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+
+        .template-card:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 15px 40px rgba(0, 0, 0, 0.3);
+        }
+
+        .card-header {
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            color: white;
+            padding: 25px;
+            position: relative;
+        }
+
+        .card-header h2 {
+            font-size: 1.8em;
+            margin-bottom: 8px;
+        }
+
+        .card-header p {
+            opacity: 0.95;
+            font-size: 1.05em;
+        }
+
+        .status-badge {
+            position: absolute;
+            top: 15px;
+            right: 15px;
+            padding: 5px 12px;
+            border-radius: 15px;
+            font-size: 0.8em;
+            font-weight: bold;
+        }
+
+        .status-deployed {
+            background: #10b981;
+            color: white;
+        }
+
+        .status-development {
+            background: #f59e0b;
+            color: white;
+        }
+
+        .card-body {
+            padding: 25px;
+        }
+
+        .features {
+            list-style: none;
+            margin: 20px 0;
+        }
+
+        .features li {
+            padding: 8px 0;
+            padding-left: 30px;
+            position: relative;
+        }
+
+        .features li::before {
+            content: "✓";
+            position: absolute;
+            left: 0;
+            color: #10b981;
+            font-weight: bold;
+            font-size: 1.2em;
+        }
+
+        .card-footer {
+            padding: 0 25px 25px;
+            display: flex;
+            gap: 10px;
+        }
+
+        .btn {
+            flex: 1;
+            padding: 12px 24px;
+            border: none;
+            border-radius: 8px;
+            font-size: 1em;
+            font-weight: bold;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            text-decoration: none;
+            text-align: center;
+            display: inline-block;
+        }
+
+        .btn-primary {
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            color: white;
+        }
+
+        .btn-primary:hover {
+            transform: scale(1.05);
+            box-shadow: 0 5px 15px rgba(102, 126, 234, 0.4);
+        }
+
+        .btn-secondary {
+            background: #f3f4f6;
+            color: #333;
+        }
+
+        .btn-secondary:hover {
+            background: #e5e7eb;
+        }
+
+        .btn:disabled {
+            opacity: 0.5;
+            cursor: not-allowed;
+        }
+
+        .btn:disabled:hover {
+            transform: none;
+            box-shadow: none;
+        }
+
+        footer {
+            text-align: center;
+            padding: 40px 20px;
+            color: white;
+            margin-top: 40px;
+        }
+
+        footer a {
+            color: white;
+            text-decoration: none;
+            font-weight: bold;
+        }
+
+        footer a:hover {
+            text-decoration: underline;
+        }
+
+        .tech-stack {
+            background: rgba(255, 255, 255, 0.1);
+            backdrop-filter: blur(10px);
+            padding: 30px;
+            border-radius: 15px;
+            margin: 40px 0;
+            color: white;
+        }
+
+        .tech-stack h3 {
+            text-align: center;
+            margin-bottom: 20px;
+            font-size: 1.5em;
+        }
+
+        .tech-list {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            gap: 15px;
+        }
+
+        .tech-item {
+            background: rgba(255, 255, 255, 0.2);
+            padding: 10px 20px;
+            border-radius: 25px;
+            font-size: 0.95em;
+        }
+
+        @media (max-width: 768px) {
+            header h1 {
+                font-size: 2em;
+            }
+
+            header p {
+                font-size: 1.1em;
+            }
+
+            .templates-grid {
+                grid-template-columns: 1fr;
+            }
+
+            .card-footer {
+                flex-direction: column;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1>🏘️ Plantillas para Inmobiliarias</h1>
+            <p>Colección profesional de plantillas web modernas para negocios inmobiliarios</p>
+            <div class="badges">
+                <span class="badge">Nuxt.js 3</span>
+                <span class="badge">Vue 3</span>
+                <span class="badge">TypeScript</span>
+                <span class="badge">Responsive Design</span>
+                <span class="badge">SEO Optimizado</span>
+            </div>
+        </header>
+
+        <div class="templates-grid">
+            <!-- Dreamwell Template -->
+            <div class="template-card">
+                <div class="card-header">
+                    <span class="status-badge status-deployed">✅ Desplegada</span>
+                    <h2>Dreamwell</h2>
+                    <p>Elegancia Moderna</p>
+                </div>
+                <div class="card-body">
+                    <p>Plantilla con diseño minimalista y elegante, ideal para inmobiliarias de lujo y propiedades premium.</p>
+                    <ul class="features">
+                        <li>Diseño limpio y sofisticado</li>
+                        <li>Totalmente responsive</li>
+                        <li>Búsqueda avanzada de propiedades</li>
+                        <li>Formularios de contacto integrados</li>
+                    </ul>
+                </div>
+                <div class="card-footer">
+                    <a href="https://plantillas-para-inmobiliarias-dreamwell.vercel.app/" target="_blank" class="btn btn-primary">Ver Demo</a>
+                    <a href="https://github.com/Yuletzif18/Plantillas-para-Inmobiliarias/tree/main/apps/portafolio/Dreamwell" target="_blank" class="btn btn-secondary">Código</a>
+                </div>
+            </div>
+
+            <!-- Luminor Template -->
+            <div class="template-card">
+                <div class="card-header">
+                    <span class="status-badge status-deployed">✅ Desplegada</span>
+                    <h2>Luminor</h2>
+                    <p>Arquitectura Premium</p>
+                </div>
+                <div class="card-body">
+                    <p>Diseño arquitectónico profesional enfocado en proyectos de alta gama.</p>
+                    <ul class="features">
+                        <li>Showcases de proyectos</li>
+                        <li>Galerías de imágenes avanzadas</li>
+                        <li>Planos interactivos</li>
+                        <li>Animaciones suaves con GSAP</li>
+                    </ul>
+                </div>
+                <div class="card-footer">
+                    <a href="https://plantillas-para-inmobiliarias-lumin.vercel.app/" target="_blank" class="btn btn-primary">Ver Demo</a>
+                    <a href="https://github.com/Yuletzif18/Plantillas-para-Inmobiliarias/tree/main/apps/portafolio/Luminor" target="_blank" class="btn btn-secondary">Código</a>
+                </div>
+            </div>
+
+            <!-- Findeo Template -->
+            <div class="template-card">
+                <div class="card-header">
+                    <span class="status-badge status-development">🔄 En Desarrollo</span>
+                    <h2>Findeo</h2>
+                    <p>Portal Completo</p>
+                </div>
+                <div class="card-body">
+                    <p>Portal inmobiliario completo con múltiples layouts y funcionalidades avanzadas.</p>
+                    <ul class="features">
+                        <li>Listados de agencias y agentes</li>
+                        <li>Integración con mapas interactivos</li>
+                        <li>Comparador de propiedades</li>
+                        <li>Panel de usuario</li>
+                    </ul>
+                </div>
+                <div class="card-footer">
+                    <button class="btn btn-primary" disabled>Próximamente</button>
+                    <a href="https://github.com/Yuletzif18/Plantillas-para-Inmobiliarias/tree/main/apps/portafolio/Findeo" target="_blank" class="btn btn-secondary">Código</a>
+                </div>
+            </div>
+
+            <!-- RentUP Template -->
+            <div class="template-card">
+                <div class="card-header">
+                    <span class="status-badge status-development">🔄 En Desarrollo</span>
+                    <h2>RentUP</h2>
+                    <p>Solución de Alquiler</p>
+                </div>
+                <div class="card-body">
+                    <p>Especializada en propiedades de alquiler y gestión de arrendamientos.</p>
+                    <ul class="features">
+                        <li>Sistema de reservas</li>
+                        <li>Calendario de disponibilidad</li>
+                        <li>Calculadora de rentas</li>
+                        <li>Gestión de solicitudes</li>
+                    </ul>
+                </div>
+                <div class="card-footer">
+                    <button class="btn btn-primary" disabled>Próximamente</button>
+                    <a href="https://github.com/Yuletzif18/Plantillas-para-Inmobiliarias/tree/main/apps/portafolio/RentUP" target="_blank" class="btn btn-secondary">Código</a>
+                </div>
+            </div>
+
+            <!-- Xero Template -->
+            <div class="template-card">
+                <div class="card-header">
+                    <span class="status-badge status-development">🔄 En Desarrollo</span>
+                    <h2>Xero</h2>
+                    <p>Minimalista y Rápido</p>
+                </div>
+                <div class="card-body">
+                    <p>Plantilla ultra-ligera y rápida, perfecta para startups inmobiliarias.</p>
+                    <ul class="features">
+                        <li>Carga ultrarrápida</li>
+                        <li>Diseño minimalista</li>
+                        <li>Mobile-first approach</li>
+                        <li>Optimización extrema</li>
+                    </ul>
+                </div>
+                <div class="card-footer">
+                    <button class="btn btn-primary" disabled>Próximamente</button>
+                    <a href="https://github.com/Yuletzif18/Plantillas-para-Inmobiliarias/tree/main/apps/portafolio/Xero" target="_blank" class="btn btn-secondary">Código</a>
+                </div>
+            </div>
+        </div>
+
+        <div class="tech-stack">
+            <h3>🛠️ Tecnologías Utilizadas</h3>
+            <div class="tech-list">
+                <span class="tech-item">Nuxt.js 3</span>
+                <span class="tech-item">Vue.js 3</span>
+                <span class="tech-item">TypeScript</span>
+                <span class="tech-item">CSS3</span>
+                <span class="tech-item">GSAP</span>
+                <span class="tech-item">Swiper.js</span>
+                <span class="tech-item">Google Maps</span>
+                <span class="tech-item">FontAwesome</span>
+            </div>
+        </div>
+
+        <footer>
+            <p>Desarrollado por <a href="https://github.com/Yuletzif18" target="_blank">@Yuletzif18</a></p>
+            <p style="margin-top: 10px;">
+                <a href="https://github.com/Yuletzif18/Plantillas-para-Inmobiliarias" target="_blank">⭐ Ver en GitHub</a>
+            </p>
+            <p style="margin-top: 20px; opacity: 0.8; font-size: 0.9em;">
+                Licencia MIT © 2024
+            </p>
+        </footer>
+    </div>
+</body>
+</html>
