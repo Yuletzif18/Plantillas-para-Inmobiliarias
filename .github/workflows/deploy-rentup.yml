@@ -37,7 +37,7 @@ jobs:
 
       - name: Install dependencies with pnpm
         working-directory: apps/portafolio/RentUP
-        run: pnpm install --frozen-lockfile
+        run: pnpm install --no-frozen-lockfile
 
       - name: Rebuild native modules
         working-directory: apps/portafolio/RentUP
