@@ -30,9 +30,13 @@ jobs:
         run: |
           rm -rf node_modules package-lock.json
 
+      - name: Clean npm cache
+        working-directory: apps/portafolio/Findeo
+        run: npm cache clean --force
+
       - name: Install dependencies
         working-directory: apps/portafolio/Findeo
-        run: npm install
+        run: npm ci || npm install
 
       - name: Build project
         working-directory: apps/portafolio/Findeo
