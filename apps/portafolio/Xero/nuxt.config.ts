@@ -48,5 +48,14 @@ export default defineNuxtConfig({
         external: (id) => id?.startsWith?.('/img/') || id?.startsWith?.('/css/') || id?.startsWith?.('/js/')
       }
     }
+  },
+
+  nitro: {
+    preset: 'vercel',
+    serveStatic: true
+  },
+
+  app: {
+    baseURL: '/'
   }
 })
