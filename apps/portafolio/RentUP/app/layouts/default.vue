@@ -12,20 +12,12 @@
 
 <script setup>
 useHead({
-  htmlAttrs: {
-    lang: 'es'
-  },
-  title: 'RentUP - Portal Inmobiliario',
   meta: [
-    { charset: 'utf-8' },
-    { name: 'viewport', content: 'width=device-width, initial-scale=1' },
-    { name: 'description', content: 'Portal inmobiliario líder para compra, venta y alquiler de propiedades' },
     { name: 'author', content: 'RentUP Team' },
     { property: 'og:type', content: 'website' },
     { property: 'og:site_name', content: 'RentUP' }
   ],
   link: [
-    { rel: 'icon', type: 'image/x-icon', href: '/favicon.ico' },
     { rel: 'preconnect', href: 'https://fonts.googleapis.com' },
     { rel: 'preconnect', href: 'https://fonts.gstatic.com', crossorigin: '' },
     { rel: 'stylesheet', href: 'https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap' }
@@ -35,7 +27,7 @@ useHead({
   }
 })
 
-// Preloader
+// Preloader y carga de scripts externos
 onMounted(() => {
   // Lógica del preloader
   setTimeout(() => {
@@ -44,6 +36,23 @@ onMounted(() => {
       preloader.style.display = 'none'
     }
   }, 1000)
+  
+  // Cargar scripts externos de manera segura
+  const loadScript = (src) => {
+    return new Promise((resolve, reject) => {
+      const script = document.createElement('script')
+      script.src = src
+      script.onload = resolve
+      script.onerror = reject
+      document.body.appendChild(script)
+    })
+  }
+  
+  // Cargar scripts en orden
+  loadScript('https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js')
+    .then(() => loadScript('/js/jquery.min.js'))
+    .then(() => loadScript('/js/custom.js'))
+    .catch(err => console.error('Error loading scripts:', err))
 })
 </script>
 
