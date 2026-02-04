@@ -145,7 +145,15 @@ npm run lint:fix     # Corrige problemas de linting
 
 ## 📦 Deployment
 
-### Vercel (Recomendado)
+### GitHub Pages (Portafolio Principal)
+
+Este repositorio incluye un portafolio/landing page que se despliega automáticamente en GitHub Pages.
+
+📘 **[Ver guía completa de activación de GitHub Pages](./GITHUB_PAGES_SETUP.md)**
+
+El sitio estará disponible en: `https://yuletzif18.github.io/Plantillas-para-Inmobiliarias/`
+
+### Vercel (Recomendado para Plantillas Individuales)
 
 ```bash
 # Instalar Vercel CLI
