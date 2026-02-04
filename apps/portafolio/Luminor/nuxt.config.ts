@@ -76,9 +76,9 @@ export default defineNuxtConfig({
   vite: {
     build: {
       rollupOptions: {
-        external: [
-          /^\/images\//
-        ]
+        external: (id: string) => {
+          return id.startsWith('/images/')
+        }
       }
     }
   }

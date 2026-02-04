@@ -45,17 +45,9 @@ export default defineNuxtConfig({
   vite: {
     build: {
       rollupOptions: {
-        external: [
-          '/img/svg/verified.svg',
-          '/img/svg/bed.svg',
-          '/img/svg/bathtub.svg',
-          '/img/svg/move.svg',
-          '/img/png/banner-home.png',
-          '/img/png/logo.png',
-          '/img/jpg/banner-5.jpg',
-          '/img/jpg/map-placeholder.jpg',
-          '/img/about/company-story.jpg'
-        ]
+        external: (id: string) => {
+          return id.startsWith('/img/')
+        }
       }
     }
   }
