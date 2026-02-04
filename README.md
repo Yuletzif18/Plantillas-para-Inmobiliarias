@@ -191,24 +191,8 @@ Cada plantilla incluye:
 
 ### ✅ Desplegadas
 - **Dreamwell**: [https://plantillas-para-inmobiliarias-dreamwell.vercel.app/](https://plantillas-para-inmobiliarias-dreamwell.vercel.app/)
-- **Luminor**: [https://plantillas-para-inmobiliarias-lumin.vercel.app/](https://plantillas-para-inmobiliarias-lumin.vercel.app/)
+- **Luminor**: [https://plantillas-para-inmobiliarias-luminor-cqkfi21v0.vercel.app/](https://plantillas-para-inmobiliarias-luminor-cqkfi21v0.vercel.app/)
 
-### 🔄 Próximamente (En Desarrollo)
-- **Findeo**: Portal completo de búsqueda inmobiliaria
-- **RentUP**: Solución especializada en alquiler
-- **Xero**: Plantilla minimalista y ultrarrápida
-
-> 💡 Las demos desplegadas están completamente funcionales y optimizadas para producción
-
-## 🤝 Contribuciones
-
-Las contribuciones son bienvenidas. Si deseas mejorar alguna plantilla:
-
-1. Fork el proyecto
-2. Crea una rama para tu feature (`git checkout -b feature/AmazingFeature`)
-3. Commit tus cambios (`git commit -m 'Add some AmazingFeature'`)
-4. Push a la rama (`git push origin feature/AmazingFeature`)
-5. Abre un Pull Request
 
 ## 📝 Licencia
 
@@ -218,19 +202,7 @@ Este proyecto está bajo la Licencia MIT. Ver el archivo `LICENSE` para más det
 
 **Yuletzif**
 - GitHub: [@Yuletzif18](https://github.com/Yuletzif18)
-- Portfolio: [Tu Portfolio]
-
-## 🌟 Agradecimientos
-
-- Diseños originales inspirados en las mejores prácticas del sector inmobiliario
-- Comunidad de Nuxt.js y Vue.js
-- Todos los contribuidores de código abierto
-
-## 📞 Soporte
-
-Si tienes alguna pregunta o necesitas ayuda:
-- Abre un [Issue](https://github.com/Yuletzif18/Plantillas-para-Inmobiliarias/issues)
-- Contacta al autor
+- Portfolio: Plantillas para Inmobiliarias
 
 ---
 
