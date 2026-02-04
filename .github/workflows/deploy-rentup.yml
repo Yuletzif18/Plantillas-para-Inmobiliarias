@@ -30,9 +30,14 @@ jobs:
         with:
           node-version: '18'
 
-      - name: Install dependencies
+      - name: Clean up npm lockfile
         working-directory: apps/portafolio/RentUP
-        run: pnpm install --no-frozen-lockfile
+        run: |
+          rm -rf node_modules package-lock.json
+
+      - name: Install dependencies with pnpm
+        working-directory: apps/portafolio/RentUP
+        run: pnpm install
 
       - name: Build project
         working-directory: apps/portafolio/RentUP
