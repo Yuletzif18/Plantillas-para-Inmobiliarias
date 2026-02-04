@@ -6,10 +6,14 @@ export default defineNuxtConfig({
   pages: true,
 
   vite: {
+    assetsInclude: ['**/*.svg', '**/*.png', '**/*.jpg', '**/*.jpeg'],
     build: {
       rollupOptions: {
-        external: (id: string) => {
-          return id.startsWith('/img/')
+        external: (id) => {
+          if (typeof id === 'string' && id.startsWith('/img/')) {
+            return true
+          }
+          return false
         }
       }
     }

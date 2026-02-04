@@ -74,10 +74,14 @@ export default defineNuxtConfig({
   modules: ['@nuxt/image'],
 
   vite: {
+    assetsInclude: ['**/*.svg', '**/*.png', '**/*.jpg', '**/*.jpeg'],
     build: {
       rollupOptions: {
-        external: (id: string) => {
-          return id.startsWith('/images/')
+        external: (id) => {
+          if (typeof id === 'string' && id.startsWith('/images/')) {
+            return true
+          }
+          return false
         }
       }
     }
