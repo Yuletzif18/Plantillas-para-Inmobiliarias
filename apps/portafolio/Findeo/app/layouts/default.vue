@@ -96,17 +96,31 @@ useHead({
     { rel: 'stylesheet', href: '/css/icons.css' },
     { rel: 'stylesheet', href: '/css/color.css' },
     { rel: 'stylesheet', href: '/css/style.css' }
-  ],
-  script: [
-    { src: '/js/jquery-3.4.1.min.js', body: true },
-    { src: '/js/jquery-migrate-3.1.0.min.js', body: true },
-    { src: '/js/mmenu.min.js', body: true },
-    { src: '/js/owl.carousel.min.js', body: true },
-    { src: '/js/magnific-popup.min.js', body: true },
-    { src: '/js/masonry.min.js', body: true },
-    { src: '/js/slick.min.js', body: true },
-    { src: '/js/custom.js', body: true }
   ]
+})
+
+// Cargar scripts dinámicamente en el cliente
+onMounted(() => {
+  const loadScript = (src) => {
+    return new Promise((resolve, reject) => {
+      const script = document.createElement('script')
+      script.src = src
+      script.onload = resolve
+      script.onerror = reject
+      document.body.appendChild(script)
+    })
+  }
+  
+  // Cargar scripts en orden secuencial
+  loadScript('/js/jquery-3.4.1.min.js')
+    .then(() => loadScript('/js/jquery-migrate-3.1.0.min.js'))
+    .then(() => loadScript('/js/mmenu.min.js'))
+    .then(() => loadScript('/js/owl.carousel.min.js'))
+    .then(() => loadScript('/js/magnific-popup.min.js'))
+    .then(() => loadScript('/js/masonry.min.js'))
+    .then(() => loadScript('/js/slick.min.js'))
+    .then(() => loadScript('/js/custom.js'))
+    .catch(err => console.error('Error loading scripts:', err))
 })
 </script>
 <style scoped>
